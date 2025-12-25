@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Playfair+Display:wght@600&display=swap');
+
+#root {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 195, 113, 0.35), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(255, 126, 179, 0.25), transparent 30%),
+    radial-gradient(circle at 60% 80%, rgba(95, 195, 228, 0.3), transparent 35%),
+    linear-gradient(135deg, #0e1525, #0a1220 50%, #0b0f1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  color: #e8ecf8;
+}
+
+.page {
+  position: relative;
+  width: min(920px, 100%);
+}
+
+.halo {
+  position: absolute;
+  inset: 0;
+  filter: blur(70px);
+  opacity: 0.6;
+  border-radius: 32px;
+  z-index: 0;
+}
+
+.halo-one {
+  background: linear-gradient(135deg, rgba(255, 195, 113, 0.4), rgba(255, 126, 179, 0.35));
+}
+
+.halo-two {
+  background: linear-gradient(315deg, rgba(95, 195, 228, 0.25), rgba(120, 109, 245, 0.2));
+  transform: translateY(24px);
+}
+
+.card {
+  position: relative;
+  background: rgba(15, 20, 35, 0.72);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px clamp(24px, 4vw, 40px);
+  box-shadow: 0 30px 120px rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffc371;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+h1 {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: clamp(2.1rem, 4vw, 2.8rem);
+  margin: 0 0 8px;
+  color: #f3f5ff;
+}
+
+.lede {
+  color: #c7cce1;
+  margin: 0 0 24px;
+  max-width: 720px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-weight: 700;
+  color: #e8ecf8;
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f4f6ff;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #60c7ec;
+  box-shadow: 0 0 0 3px rgba(96, 199, 236, 0.2);
+  transform: translateY(-1px);
+}
+
+input::placeholder {
+  color: #9aa5c0;
+}
+
+button {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, #ffc371, #ff7eb3);
+  color: #0c0f1c;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.4);
+  opacity: 0.6;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 126, 179, 0.35);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+.hint {
+  margin: 0;
+  color: #9aa5c0;
+}
+
+.message {
+  margin-top: 26px;
+  padding: 20px 18px;
+  border-radius: 16px;
+  background: rgba(96, 199, 236, 0.08);
+  border: 1px solid rgba(96, 199, 236, 0.3);
+  color: #e8f5ff;
+}
+
+.message-kicker {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #60c7ec;
+  font-weight: 700;
+}
+
+.message-body {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.pinata {
+  text-align: left;
+  display: grid;
+  gap: 8px;
+}
+
+.pinata-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: #ff7eb3;
+}
+
+.pinata-title {
+  margin: 0;
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: clamp(2rem, 3.6vw, 2.6rem);
+  color: #fbe2ff;
+}
+
+.pinata-body {
+  margin: 0;
+  color: #d5dcff;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  #root {
+    padding: 32px 16px;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
