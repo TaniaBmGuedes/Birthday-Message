@@ -19,3 +19,28 @@ body {
   background: #0b0f1a;
   color: #e8ecf8;
 }
+
+.star-burst {
+  position: absolute;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffc371, #ff7eb3);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  animation: star-pop 900ms ease-out forwards;
+  transform: translate(0, 0) scale(0);
+}
+
+@keyframes star-pop {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(var(--dx, 0), var(--dy, 0)) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--dx, 0) * 1.1), calc(var(--dy, 0) * 1.1)) scale(0.4);
+  }
+}
