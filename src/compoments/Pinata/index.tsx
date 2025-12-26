@@ -104,7 +104,7 @@ export default function Pinata({ name }: PinataProps) {
 
         <div className="flex items-center gap-3">
           <Button
-            className="rounded-full bg-linear-to-r from-[#ffc371] via-[#ff9ad5] to-[#ff7eb3] px-4 py-3 text-sm font-bold text-[#0c0f1c] shadow-[0_20px_50px_rgba(255,126,179,0.55)] transition duration-150 ease-in-out hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7eb3]"
+            className="rounded-full bg-linear-to-r from-[#ffc371] via-[#ff9ad5] to-[#ff7eb3] px-4 py-3 text-sm font-bold text-[#0c0f1c] shadow-[0_20px_50px_rgba(255,126,179,0.55)] transition duration-150 ease-in-out hover:-translate-y-0.5 active:translate-y-0  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7eb3]"
             radius="full"
             variant="shadow"
             color="secondary"
@@ -122,7 +122,7 @@ export default function Pinata({ name }: PinataProps) {
         </p>
         <h2 className="font-['Playfair_Display','Times_New_Roman',serif] text-[clamp(2.4rem,4vw,3.1rem)] leading-tight text-[#fbe2ff]">
           Feliz aniversário{" "}
-          <span className="bg-gradient-to-r from-[#ffc371] to-[#ff7eb3] bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-[#ffc371] to-[#ff7eb3] bg-clip-text text-transparent">
             {name || ""}
           </span>
         </h2>
